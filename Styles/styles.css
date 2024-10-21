@@ -1,0 +1,276 @@
+/*
+    Instructor: Nicolas Silva
+    File Name: styles.css
+    Date: 08/16/2024
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, section, article, aside, figure, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    padding: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #4a4a4a;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(103, 100, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro h2 {
+    margin-bottom: 10px;
+}
+
+.intro figure {
+    margin: 0;
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+}
+
+.intro p {
+    margin-top: 10px;
+}
+
+/* Technologies Section */
+.technologies {
+    margin-top: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tech-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Text Background Styles */
+.text-background {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Additional Intro Sections */
+.intro2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 51, 102, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.future {
+    flex: 1;
+    background-color: rgba(103, 100, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.examples {
+    margin-top: 20px;
+    background-color: rgba(103, 100, 255, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.examples a {
+    color: black;
+    text-decoration: none;
+}
+
+.examples a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .intro2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .future {
+        margin-top: 20px;
+    }
+}
+
+/* Additional Intro3 Section */
+.intro3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    background-color: rgba(103, 100, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid2 Styles */
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.grid2 figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    width: 90%;
+    max-width: 300px;
+    height: 350px;
+    overflow: hidden;
+    background-color: rgba(0, 51, 102, 0.9);
+}
+
+.grid2 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 180px;
+    object-fit: cover;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
+}
